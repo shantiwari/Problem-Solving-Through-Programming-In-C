@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+ int c, n, search,
+ array[100];
+ scanf("%d",&n); //number of elements in the array
+
+ for (c = 0; c < n; c++)
+ scanf("%d",&array[c]);
+
+ scanf("%d", &search); //The element to search is read from test case.
+
+/* Use the printf statements as below:
+ printf("%d found at location %d.\n", search, variable_name);
+ printf("Not found! %d isn't present in the list.\n", search);
+*/
+int i=0,count=0;
+for(i=0;i<n;i++)
+{
+  if(array[i]==search)
+  {
+    count=count+1;
+    printf("%d found at location %d.", search,i+1);
+  }
+}
+if(count==0)
+{
+  printf("Not found! %d isn't present in the list.", search);
+}
+return 0;
+}
